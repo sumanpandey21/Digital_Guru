@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #3c3c8a;
+    color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+header h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.mentor-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mentor-image {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mentor-intro p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.additional-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.additional-images img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.additional-images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px rgba(255, 255, 255, 0.3);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    .additional-images img {
+        width: 120px;
+    }
+
+    .social-icons img {
+        width: 35px;
+    }
+}

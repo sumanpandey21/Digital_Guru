@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: white;
+    background-color: rgb(23, 23, 56);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    color:white;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.dropdown {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.dropdown label {
+    font-size: 18px;
+    margin-right: 10px;
+    color: white;
+}
+
+.dropdown select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.course {
+    background: rgb(54, 54, 102);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.course:hover {
+    transform: translateY(-10px);
+}
+
+.course h2 {
+    margin-bottom: 10px;
+}
+
+.course p, .course ul {
+    margin-bottom: 15px;
+}
+
+.course ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.course-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buy-btn {
+    display: block;
+    background-color: #0341f8;
+    color: white;
+    text-align: center;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #4aa905;
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px 0;
+    background: #3f4a76;
+    color: white;
+    border-radius: 10px;
+}
+* a{
+    color: rgb(17, 255, 17);
+}
