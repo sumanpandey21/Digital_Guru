@@ -10,23 +10,49 @@ body {
     color: white;
     background-color: rgb(23, 23, 56);
     line-height: 1.6;
-    padding: 20px;
-}
-
-.container {
     position: relative;
 }
 
-.logo {
-    margin-bottom: 10px;
-    width: 20%;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #2a3356;
+    padding: 10px 20px;
     position: sticky;
+    top: 0px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
 }
 
-.logo a {
+nav:hover {
+    background-color: #1c243e;
+}
+
+nav .logo img {
     height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+nav .nav-items ul {
+    display: flex;
+    list-style: none;
+    gap: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .nav-items ul li a {
+    text-decoration: none;
     color: white;
-    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav .nav-items ul li:hover a {
+    color: #ffcc00;
 }
 
 
@@ -90,7 +116,7 @@ header h1 {
 
 .course-image {
     display: block;
-    max-width: 100%;
+    max-width: 300px;
     height: auto;
     border-radius: 10px;
     margin: 15px 0;
@@ -121,6 +147,16 @@ footer {
     margin-top: 30px;
     padding: 10px 0;
     background: #3f4a76;
+    color: white;
+    border-radius: 10px;
+}
+
+.copyright {
+
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px 0;
+    background: #2a3356;
     color: white;
     border-radius: 10px;
 }

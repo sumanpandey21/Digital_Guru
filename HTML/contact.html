@@ -11,53 +11,87 @@
 </head>
 
 <body>
-    <div class="contact-container">
-        <header>
+    <div class="container">
+        <nav>
+
             <div class="logo">
-                <a href="/index.html" target="_self">
-                    <span class="material-symbols-outlined">
-                        home
-                    </span>
-                </a>
+
+                <img src="/Homepage-Images/image.png" alt="" srcset="">
+
             </div>
-            <h1>Contact Me</h1>
-            <h2>Let’s Stay Connected</h2>
-        </header>
-        <form class="contact-form">
-            <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            <div class="nav-items">
+                <ul>
+                    <li>
+                        <h2><a href="/index.html" target="_parent">Home</a> </h2>
+                    </li>
+                    <li>
+                        <h2><a href="/HTML/courses.html" target="_parent">Courses</a> </h2>
+                    </li>
+                    <li>
+                        <h2><a href="/HTML/about.html" target="_parent">About</a> </h2>
+                    </li>
+                    <li>
+                        <h2><a href="/HTML/contact.html" target="_parent">Contact</a> </h2>
+                    </li>
+                </ul>
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </nav>
+        <div class="contact-container">
+
+            <header>
+                <h1>Contact Me</h1>
+                <h2>Let’s Stay Connected</h2>
+            </header>
+            <div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" placeholder="Enter the subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                <footer>
+                    <p>Connect with us:</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook Logo">
+                        </a>
+                        <a href="https://instagram.com" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Logo">
+                        </a>
+                        <a href="https://twitter.com" target="_blank">
+                            <img src="/Assets/twitter_logo.png" alt="Twitter Logo">
+                        </a>
+                    </div>
+                </footer>
             </div>
-            <div class="form-group">
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" placeholder="Enter the subject">
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your message here"
-                    required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
-        <footer>
-            <p>Connect with us:</p>
-            <div class="social-icons">
-                <a href="https://facebook.com" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook Logo">
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Logo">
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <img src="/Assets/twitter_logo.png" alt="Twitter Logo">
-                </a>
-            </div>
-        </footer>
+
+        </div>
     </div>
+    <footer class="copyright">
+        <div class="contact-box">
+            <div class="contact-information">
+                <p><strong>Email : </strong><a href="">e-Learning@gmail.com</a></p>
+                <p><strong>Phone : </strong><a href=""> +977 9865432101</a></p>
+                <p><strong>WhatsApp : </strong><a href="">+977 9840121314</a></p>
+            </div>
+        </div>
+
+        <p >&copy; 2025 e-Learning. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
