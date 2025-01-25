@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMA Working Mechanism</title>
+    <link rel="stylesheet" href="/CSS/DMA.css">
+</head>
+<body>
+    <header class="header">
+        <h1>DMA Working Mechanism</h1>
+    </header>
+    <main class="content">
+        <section class="phase">
+            <h2>Step-by-Step Process: I/O Device Reads Data from Memory</h2>
+            <article>
+                <h3>Phase 1: Initialization (By CPU)</h3>
+                <ul>
+                    <li><strong>DMA Setup by CPU:</strong>
+                        <ul>
+                            <li>Source Address Register (SAR): Set to the memory location where the data resides.</li>
+                            <li>Destination Address Register (DAR): Set to the I/O device address where the data will be sent.</li>
+                            <li>Transfer Count Register (TCR): Set to the number of data units to transfer.</li>
+                        </ul>
+                    </li>
+                    <li><strong>DMA Mode Selection:</strong>
+                        <p>The CPU informs the DMA Controller of the transfer mode (read from memory, write to I/O).</p>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h3>Phase 2: DMA Request and Bus Control</h3>
+                <ul>
+                    <li>I/O device generates a DMA Request signal to indicate a need to read data from memory.</li>
+                    <li>DMA Controller asserts the Bus Request signal to the CPU to gain control of the buses.</li>
+                    <li>CPU acknowledges by asserting the Bus Grant signal, giving control to the DMA Controller.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Phase 3: Address Selection and Data Fetch</h3>
+                <ul>
+                    <li>SAR Address Selection: Address Select logic activates SAR and places the memory address on the Address Bus.</li>
+                    <li>Read Operation: The memory responds by placing data onto the Data Bus.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Phase 4: Data Transfer to I/O Device</h3>
+                <ul>
+                    <li>Address Select logic activates DAR, placing the I/O device address on the Address Bus.</li>
+                    <li>Write Operation: Data on the Data Bus is transferred to the I/O device.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Phase 5: Register Updates</h3>
+                <ul>
+                    <li>Registers Updated:
+                        <ul>
+                            <li>SAR increments to the next memory location.</li>
+                            <li>DAR updates for the next I/O device location.</li>
+                            <li>TCR decrements to reflect remaining data.</li>
+                        </ul>
+                    </li>
+                    <li>Check TCR:
+                        <ul>
+                            <li>If TCR > 0, process repeats.</li>
+                            <li>If TCR = 0, transfer is complete.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h3>Phase 6: Completion</h3>
+                <ul>
+                    <li>DMA Acknowledge: Indicates transfer completion to the I/O device.</li>
+                    <li>Bus Control Return: CPU regains control of the buses.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="summary">
+            <h2>Summary of Signals and Components Involved</h2>
+            <ul>
+                <li><strong>SAR, DAR, TCR:</strong> Manage addresses and transfer count.</li>
+                <li><strong>Read/Write Signals:</strong> Control data flow between memory and I/O.</li>
+                <li><strong>Address Select:</strong> Activates SAR or DAR appropriately.</li>
+                <li><strong>DMA Request/Acknowledge:</strong> Initiates and completes DMA operations.</li>
+            </ul>
+            <p>This process ensures efficient data transfer between memory and I/O devices without burdening the CPU.</p>
+        </section>
+    </main>
+</body>
+</html>
